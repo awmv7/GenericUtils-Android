@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 
 public class SystemPropertiesUtils {
     public static String get(String key) {
-  		try {
+        try {
   			Class<?> SystemProperties = Class.forName("android.os.SystemProperties");
   			Method get = SystemProperties.getDeclaredMethod("get", String.class);
   			Object obj = get.invoke(SystemProperties, key);
